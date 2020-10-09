@@ -1,0 +1,107 @@
+<title>IPL</title>
+<h1>Predicing First Innings Score</h1>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <img src='/static/dream11.jpg'alt="IPL" width='1365' height='400'>
+    <form action ="{{url_for('PREDICT')}}"method="post">
+        <input type ="text" name='Season' placeholder='Season' required='required'/>
+        <label for='Toss_Decision'>Toss_Decision</label>
+        <select name='Toss_Decision' id='Toss_Decision'>
+            <optgroup label='Toss_Decision'>
+                <option>Field</option>
+                <option>Bat</option>
+            </optgroup>
+        </select>
+        <label for='Toss_Winner'>Toss_Winner</label>
+        <select name='Toss_Winner' id='Toss_Winner'>
+            <optgroup label='Toss_Winner'>
+                <option>DC</option>
+                <option>KKR</option>
+                <option>KingsXI</option>
+                <option>MI</option>
+                <option>RCB</option>
+                <option>RR</option>
+                <option>SRH</option>
+                <option>CSK</option>
+            </optgroup>
+        </select>
+        <label for='Batting_Team'>Batting_Team</label>
+        <select name='Batting_Team' id='Batting_Team'>
+            <optgroup label='Batting_Team'>
+                <option>DC</option>
+                <option>KKR</option>
+                <option>KingsXI</option>
+                <option>MI</option>
+                <option>RCB</option>
+                <option>RR</option>
+                <option>SRH</option>
+                <option>CSK</option>
+            </optgroup>
+        </select>
+        <label for='Bowling_Team'>Bowling_Team</label>
+        <select name='Bowling_Team' id='Bowling_Team'>
+            <optgroup label='Bowling_Team'>
+                <option>DC</option>
+                <option>KKR</option>
+                <option>KingsXI</option>
+                <option>MI</option>
+                <option>RCB</option>
+                <option>RR</option>
+                <option>SRH</option>
+                <option>CSK</option>
+            </optgroup>
+        </select>
+        <input type ="text" name='Extra_runs' placeholder='Extra_runs' required='required'/>
+        <input type ="text" name='Batting_power_play' placeholder='Batting_power_play' required='required'/>
+        <input type ="text" name='Expected_Death_overs_Score' placeholder='Expected_Death_overs_Score' required='required'/>
+        <label for='Venues'>Venues</label>
+        <select name='Venues' id='Venues'>
+            <optgroup label='Venues'>
+                <option>Sheikh Zayed Stadium</option>
+                <option>Sharjah Cricket Stadium</option>
+                <option>Dubai International Cricket Stadium</option>
+                <option>Rajiv Gandhi International Stadium, Uppal</option>
+                <option>M Chinnaswamy Stadium</option>
+                <option>Wankhede Stadium</option>
+                <option>Holkar Cricket Stadium</option>
+                <option>Eden Gardens</option>
+                <option>Feroz Shah Kotla</option>
+                <option>Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+                <option>Punjab Cricket Association Stadium, Mohali</option>
+                <option>Sawai Mansingh Stadium</option>
+                <option>MA Chidambaram Stadium, Chepauk</option>
+                <option>Dr DY Patil Sports Academy</option>
+                <option>Newlands</option>
+                <option>St George's Park</option>
+                <option>Kingsmead</option>
+                <option>SuperSport Park</option>
+                <option>Buffalo Park</option>
+                <option>New Wanderers Stadium</option>
+                <option>De Beers Diamond Oval</option>
+                <option>OUTsurance Oval</option>
+                <option>Brabourne Stadium</option>
+                <option>Sardar Patel Stadium, Motera</option>
+                <option>Himachal Pradesh Cricket Association Stadium</option>
+                <option>Subrata Roy Sahara Stadium</option>
+                <option>Shaheed Veer Narayan Singh International Stadium</option>
+                <option>JSCA International Stadium Complex</option>
+                <option>Barabati Stadium</option>
+                <option>Maharashtra Cricket Association Stadium</option>
+                <option>Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+                <option>M. A. Chidambaram Stadium</option>
+                <option>Feroz Shah Kotla Ground</option>
+                <option>M. Chinnaswamy Stadium</option>
+                <option>Rajiv Gandhi Intl. Cricket Stadium</option>
+                <option>IS Bindra Stadium</option>
+                <option>ACA-VDCA Stadium</option>
+            </optgroup>
+        </select>
+        <button type ='submit' class='btn btn-primary btn-block btn-large'>PREDICT</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+{{ans}}
